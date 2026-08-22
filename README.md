@@ -12,8 +12,8 @@ you can reach the network, and GPU drivers are already installed (that part
 is hardware-specific — Intel/AMD/Nvidia — and out of scope for this repo).
 
 ```bash
-git clone <this-repo-url> ~/hyprland-dotfiles
-cd ~/hyprland-dotfiles
+git clone <this-repo-url> ~/Documents/hyprland-dotfiles
+cd ~/Documents/hyprland-dotfiles
 ./install.sh
 ```
 
