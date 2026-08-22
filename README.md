@@ -3,6 +3,8 @@
 My Hyprland rice for Arch Linux: Waybar, Rofi, wlogout, hyprlock, and a
 Lua-based Hyprland config (`hl.*` API, Hyprland ≥ 0.56).
 
+![screenshot](screenshots/workspace3.png)
+
 ## Install
 
 Fresh Arch Linux install, X11/Wayland not yet configured:
