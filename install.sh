@@ -13,10 +13,16 @@ fi
 
 echo "==> Installing official repo packages"
 sudo pacman -S --needed --noconfirm \
-    hyprland hyprlock waybar rofi dunst kitty thunar wlogout \
+    git base-devel \
+    hyprland hyprlock sddm waybar rofi dunst kitty thunar wlogout \
     grim slurp cliphist wl-clipboard playerctl wireplumber \
     networkmanager network-manager-applet polkit-kde-agent \
+    xdg-desktop-portal-hyprland \
     jq nvtop awww quickshell vivaldi pavucontrol
+
+echo "==> Enabling system services"
+sudo systemctl enable --now NetworkManager
+sudo systemctl enable sddm
 
 echo "==> Installing AUR packages"
 if ! command -v paru >/dev/null 2>&1; then
@@ -64,11 +70,13 @@ cat <<'EOF'
 ==> Done.
 
 Next steps:
-  1. Log out, pick "Hyprland" as your session in your display manager, log back in.
-  2. First launch will autostart waybar, dunst, nm-applet, cliphist, awww (wallpaper
+  1. Reboot (or start sddm now: sudo systemctl start sddm). SDDM was enabled but
+     not started, so it won't yank you out of your current session.
+  2. At the login screen, pick "Hyprland" as your session.
+  3. First launch will autostart waybar, dunst, nm-applet, cliphist, awww (wallpaper
      daemon) and set the wallpaper to wallpapers/w3.jpg. Change it any time with:
        awww img ~/Pictures/Wallpapers/<file>
-  3. See README.md for the full keybind list.
+  4. See README.md for the full keybind list.
 
 Notes:
   - kb_layout is set to "fr" (AZERTY) in hypr/hyprland.lua. If you use a different

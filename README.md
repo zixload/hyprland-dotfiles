@@ -7,7 +7,9 @@ Lua-based Hyprland config (`hl.*` API, Hyprland ≥ 0.56).
 
 ## Install
 
-Fresh Arch Linux install, X11/Wayland not yet configured:
+Assumes: a base Arch Linux install is already done (e.g. via `archinstall`),
+you can reach the network, and GPU drivers are already installed (that part
+is hardware-specific — Intel/AMD/Nvidia — and out of scope for this repo).
 
 ```bash
 git clone <this-repo-url> ~/hyprland-dotfiles
@@ -15,13 +17,15 @@ cd ~/hyprland-dotfiles
 ./install.sh
 ```
 
-The script installs every package this config depends on (official repos +
-AUR via `paru`, which it bootstraps if missing), then symlinks the configs
-into `~/.config/` (backing up anything already there as `<file>.bak-<timestamp>`)
-and copies the wallpapers into `~/Pictures/Wallpapers/`.
+The script installs every package this config depends on — Hyprland itself,
+SDDM (the login screen), and everything else, from official repos plus AUR
+via `paru` (which it bootstraps if missing) — enables the SDDM and
+NetworkManager services, then symlinks the configs into `~/.config/`
+(backing up anything already there as `<file>.bak-<timestamp>`) and copies
+the wallpapers into `~/Pictures/Wallpapers/`.
 
-After it finishes: log out, select **Hyprland** in your display manager, log
-back in.
+After it finishes: reboot (or `sudo systemctl start sddm`), pick **Hyprland**
+at the login screen.
 
 ## Layout
 
