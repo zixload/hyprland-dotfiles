@@ -18,6 +18,7 @@ sudo pacman -S --needed --noconfirm \
     grim slurp cliphist wl-clipboard playerctl wireplumber \
     networkmanager network-manager-applet polkit-kde-agent \
     xdg-desktop-portal-hyprland \
+    papirus-icon-theme \
     jq nvtop awww quickshell vivaldi pavucontrol
 
 echo "==> Enabling system services"
@@ -58,6 +59,8 @@ link "$DOTFILES_DIR/rofi"                          "$CONFIG_DIR/rofi"
 link "$DOTFILES_DIR/kitty"                         "$CONFIG_DIR/kitty"
 link "$DOTFILES_DIR/wlogout"                       "$CONFIG_DIR/wlogout"
 link "$DOTFILES_DIR/quickshell/hyprquickpaper"     "$CONFIG_DIR/quickshell/hyprquickpaper"
+link "$DOTFILES_DIR/gtk-3.0"                       "$CONFIG_DIR/gtk-3.0"
+link "$DOTFILES_DIR/mimeapps.list"                 "$CONFIG_DIR/mimeapps.list"
 
 echo "==> Copying wallpapers to ~/Pictures/Wallpapers"
 mkdir -p "$HOME/Pictures/Wallpapers"

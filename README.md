@@ -37,7 +37,13 @@ kitty/                  kitty.conf
 wlogout/                layout, style.css, icons/
 quickshell/hyprquickpaper/   wallpaper-picker shell (invoked by Super+W)
 wallpapers/             ~35 images, autostart uses w3.jpg
+gtk-3.0/                settings.ini, gtk.css — dark GTK theme (Thunar, file pickers)
+mimeapps.list           default apps (Vivaldi for http/https)
 ```
+
+Not included on purpose: `~/.config/gtk-3.0/bookmarks` (Thunar sidebar —
+personal folder paths, would clobber yours) and `~/.bashrc` (stock Arch
+default, nothing rice-specific in it).
 
 ## Keybinds
 
